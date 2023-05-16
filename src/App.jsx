@@ -2,6 +2,7 @@ import './App.css'
 import React, { Component } from 'react';
 import Titulo from './components/Titulo';
 import Listas from './components/Listas';
+import Card from './components/Card';
 
 
 function imprimirLike(){
@@ -36,6 +37,10 @@ function App() {
         <li>Mónica Bárbaro</li>
         <li>Lewis Pullman</li>
       </Listas>
+
+      <Card title="Tom Cruise">
+        <p>Personaje: Maverick</p>
+      </Card>
 
       <button onClick={imprimirLike} className='colorBoton'>
         LIKE
