@@ -1,31 +1,11 @@
 import './App.css'
 import React, { Component } from 'react';
+import Titulo from './components/Titulo';
+import Listas from './components/Listas';
 
 
 function imprimirLike(){
   console.log(`LIKE!`);
-}
-
-class Titulo extends Component {
-  render() {
-    return (
-      <div>
-        <h3>{this.props.title}</h3>
-      </div>
-    );
-  }
-}
-
-class Listas extends React.Component{
-  render(){
-         return(
-                <ul>
-                  {
-                    this.props.children
-                  }
-                </ul>
-         )
-  }
 }
 
 function App() {
@@ -37,8 +17,8 @@ function App() {
         <Titulo title="Generos"/>
         <Listas>
           <li>Acción</li>
-          <li>Romance</li>
           <li>Drama</li>
+          <li>Romance</li>
         </Listas>
         <img src="https://cloudfront-us-east-1.images.arcpublishing.com/infobae/PKEDBYMES5GSLE5SWZISGXRVI4.jpg" alt="TopGun2" />
         <p>
@@ -47,14 +27,14 @@ function App() {
       </div>
       <Titulo title="Actores"/>
       <Listas>
-        <li>Leonardo DiCaprio</li>
-        <li>Brad Pitt</li>
         <li>Tom Cruise</li>
-        <li>Will Smith</li>
-        <li>Julia Roberts</li>
-        <li>Angelina Jolie</li>
-        <li>Meryl Streep</li>
-        <li>Scarlett Johansson</li>
+        <li>Miles Teller</li>
+        <li>Val Kilmer</li>
+        <li>Glen Powell</li>
+        <li>Jennifer Connelly</li>
+        <li>Jon Hamm</li>
+        <li>Mónica Bárbaro</li>
+        <li>Lewis Pullman</li>
       </Listas>
 
       <button onClick={imprimirLike} className='colorBoton'>
